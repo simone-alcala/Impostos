@@ -37,6 +37,10 @@ public class PessoaFisica extends Pessoa {
       imposto -= saude * 0.5;
     }
 
+    if (imposto < 0) {
+      imposto = 0.0;
+    }
+
     return imposto;
   }
 
