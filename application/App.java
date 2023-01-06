@@ -47,9 +47,14 @@ public class App {
 
     System.out.println("IMPOSTOS PAGOS:");
 
+    double totalTaxes = 0.0;
+
     for (Pessoa pessoa : pessoas) {
+      totalTaxes += pessoa.imposto();
       System.out.printf(pessoa.getNome() + ": $ " + String.format("%.2f", pessoa.imposto()) + "\n");
     }
+
+    System.out.printf("TOTAL TAXES: %.2f", totalTaxes);
 
     sc.close();
   }
